@@ -1,6 +1,6 @@
 #include "hash.h"
-/* Элементы такой таблицы по мере их вставки в таблицу должны включаться в дополнительный список
-итератор для этого класса, который перебирает элементы в том порядке, в котором они были вставлены */
+/* Р­Р»РµРјРµРЅС‚С‹ С‚Р°РєРѕР№ С‚Р°Р±Р»РёС†С‹ РїРѕ РјРµСЂРµ РёС… РІСЃС‚Р°РІРєРё РІ С‚Р°Р±Р»РёС†Сѓ РґРѕР»Р¶РЅС‹ РІРєР»СЋС‡Р°С‚СЊСЃСЏ РІ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Р№ СЃРїРёСЃРѕРє
+РёС‚РµСЂР°С‚РѕСЂ РґР»СЏ СЌС‚РѕРіРѕ РєР»Р°СЃСЃР°, РєРѕС‚РѕСЂС‹Р№ РїРµСЂРµР±РёСЂР°РµС‚ СЌР»РµРјРµРЅС‚С‹ РІ С‚РѕРј РїРѕСЂСЏРґРєРµ, РІ РєРѕС‚РѕСЂРѕРј РѕРЅРё Р±С‹Р»Рё РІСЃС‚Р°РІР»РµРЅС‹ */
 template<typename T>
 Hash_Table<T>::Hash_Table() : table(50)
 {
@@ -37,7 +37,7 @@ int Hash_Table<T>::hash(const std::string& key) const
 	return hashsum % table.size();
 }
 
-//добавить элемент
+//РґРѕР±Р°РІРёС‚СЊ СЌР»РµРјРµРЅС‚
 template<typename T>
 void Hash_Table<T>::push(const std::string& key, const T& value)
 {
@@ -61,7 +61,7 @@ void Hash_Table<T>::push(const std::string& key, const T& value)
 	}
 	doplist.push_back(item);
 }
-//удалить элемент
+//СѓРґР°Р»РёС‚СЊ СЌР»РµРјРµРЅС‚
 template<typename T>
 void Hash_Table<T>::pop(const std::string& key)
 {
@@ -84,7 +84,7 @@ void Hash_Table<T>::pop(const std::string& key)
 	table[index]->remove(searched_item);
 }
 
-//найти элемент
+//РЅР°Р№С‚Рё СЌР»РµРјРµРЅС‚
 template<typename T>
 Item<T>* Hash_Table<T>::search(std::string key) const
 {
@@ -106,7 +106,7 @@ Item<T>* Hash_Table<T>::search(std::string key) const
 	return nullptr;
 }
 
-//сделать таблицу пустой
+//СЃРґРµР»Р°С‚СЊ С‚Р°Р±Р»РёС†Сѓ РїСѓСЃС‚РѕР№
 template<typename T>
 void Hash_Table<T>::clear()
 {
@@ -126,7 +126,7 @@ void Hash_Table<T>::clear()
 	doplist.clear();
 }
 
-//проверка таблицы на пустоту
+//РїСЂРѕРІРµСЂРєР° С‚Р°Р±Р»РёС†С‹ РЅР° РїСѓСЃС‚РѕС‚Сѓ
 template<typename T>
 bool Hash_Table<T>::isEmpty() const
 {
